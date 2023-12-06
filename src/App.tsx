@@ -1,29 +1,30 @@
 import React from 'react';
 import './App.css';
-import { Fragment } from 'react'
-import {
-  BriefcaseIcon,
-  CalendarIcon,
-  CheckIcon,
-  ChevronDownIcon,
-  CurrencyDollarIcon,
-  LinkIcon,
-  MapPinIcon,
-  PencilIcon,
-} from '@heroicons/react/20/solid'
-import { Menu, Transition } from '@headlessui/react'
+
+// สร้างตัวอย่างของ menu bar ด้วย tailwindcss
+const Menu = () => {
+  return (
+    <div className="bg-blue-800 text-white h-12">
+      <div className="container mx-auto flex  items-center justify-between">
+        <div className="flex space-x-4 text-lg py-2">
+          <div>Home</div>
+          <div>About</div>
+          <div>Contact</div>
+        </div>
+        <div className="flex space-x-4 text-lg py-2">
+          <div>Login</div>
+          <div>Register</div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 
 function App() {
   return (
     <div>
-      <header className="bg-white shadow">
-          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
-          </div>
-        </header>
-        <main>
-          <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">{/* Your content */}</div>
-        </main>
+      <Menu />
     </div>
   );
 }
